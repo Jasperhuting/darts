@@ -138,8 +138,21 @@
           return;
         }
         // Flatten to string to display
-        const output = range.values;
-        document.getElementById('content').innerText = output;
+        const output = range.values.split('\n');
+
+
+        let outputTable = '<table border="1">';
+        for (var i = 0; i < output.length; i++) {
+            var rowData = output[i].split(',');
+            outputTable += '<tr>';
+            for (var j = 0; j < rowData.length; j++) {
+                outputTable += '<td>' + rowData[j] + '</td>';
+            }
+            outputTable += '</tr>';
+        }
+        outputTable += '</table>';
+        
+        document.getElementById('content').innerText = outputTable;
       }
     </script>
     <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
