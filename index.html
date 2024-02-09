@@ -39,7 +39,7 @@
         function getData() {
             gapi.client.sheets.spreadsheets.values.get({
                 spreadsheetId: '1Mloavfa_lrsSerjVTWY5_dGER2Vt0P811QEPkXlFgYs', // Replace with your spreadsheet ID
-                range: 'YoungOnes Open' // Replace with your sheet name or range
+                range: 'Tussenstand!A1L20' // Replace with your sheet name or range
             }).then(function(response) {
                 var values = response.result.values;
                 var output = '';
@@ -68,3 +68,6 @@
     <script src="https://apis.google.com/js/api.js?onload=handleClientLoad"></script>
 </body>
 </html>
+
+
+
