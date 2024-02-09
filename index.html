@@ -145,9 +145,7 @@
         for (var i = 0; i < range.values.length; i++) {
             outputTable += '<tr>';
             for (var j = 0; j < range.values[i].length; j++) {
-              if (j === 8 || j === 9) {
-                return null;
-              } else {
+              if (j !== 8 && j !== 9) {                
                 outputTable += '<td>' + range.values[i][j] + '</td>';
               }
             }
