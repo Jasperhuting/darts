@@ -142,14 +142,12 @@
         console.log('response.result', response.result)
         console.log('range', range)
         console.log('range.values', range.values)
-        const output = range.values.split(',');
-
-
+      
        var outputTable = '<table border="1">';
-        for (var i = 0; i < data.length; i++) {
+        for (var i = 0; i < range.values.length; i++) {
             outputTable += '<tr>';
-            for (var j = 0; j < data[i].length; j++) {
-                outputTable += '<td>' + data[i][j] + '</td>';
+            for (var j = 0; j < range.values[i].length; j++) {
+                outputTable += '<td>' + range.values[i][j] + '</td>';
             }
             outputTable += '</tr>';
         }
