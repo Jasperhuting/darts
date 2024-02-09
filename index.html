@@ -145,18 +145,17 @@
         const output = range.values.split(',');
 
 
-        let outputTable = '<table border="1">';
-        for (var i = 0; i < output.length; i++) {
-            var rowData = output[i];
+       var outputTable = '<table border="1">';
+        for (var i = 0; i < data.length; i++) {
             outputTable += '<tr>';
-            for (var j = 0; j < rowData.length; j++) {
-                outputTable += '<td>' + rowData[j] + '</td>';
+            for (var j = 0; j < data[i].length; j++) {
+                outputTable += '<td>' + data[i][j] + '</td>';
             }
             outputTable += '</tr>';
         }
         outputTable += '</table>';
         
-        document.getElementById('content').innerText = outputTable;
+        document.getElementById('output').innerHTML = outputTable;
       }
     </script>
     <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
